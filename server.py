@@ -66,11 +66,11 @@ if __name__ == '__main__':
             ServerIP=int(ip_env)
     if port_env is not None:
             print 'Server.py: Server Port number detected in environment variable, overwite local config values.'
-            ServerPort=int(os.environ.get("PORT",port_env))
+            ServerPort=int(port_env)
 
     app=tornado.web.Application([
         (r"/cd",CarbonDateServer)])
-    app.listen(ServerPort)
+    app.listen(int(os.environ.get("PORT",ServerPort)))
     #str(ServerIP),
     tornado.ioloop.IOLoop.current().start()
   
