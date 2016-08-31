@@ -2,6 +2,6 @@
 	"AccessToken":["YourBitlyAccessTokenHere"],
 	"BingAPIKey":"YourBingSearchAPIKey",
 	"ServerIP": "0.0.0.0",
-	"ServerPort": 8888,
+	"ServerPort": 5000,
 	"SystemUtility":["cdGetLowest", "cdGetFirstAppearanceInArchives"]
 }
