@@ -1,5 +1,5 @@
 {
-	"AccessToken":[""250a4a1c33c3cd8ca1a45e49d2d758849620186a""],
+	"AccessToken":["250a4a1c33c3cd8ca1a45e49d2d758849620186a"],
 	"BingAPIKey":"YourBingSearchAPIKey",
 	"ServerIP": "0.0.0.0",
 	"ServerPort": 5000,
