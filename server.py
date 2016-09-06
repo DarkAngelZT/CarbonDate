@@ -73,7 +73,7 @@ if __name__ == '__main__':
             ServerPort=int(port_env)
 
     #initialize logger
-    logging.basicConfig(level=os.environ.get("LOGLV",logging.ERROR),format='<%(name)s>[%(levelname)s]%(funcName)s : %(message)s')
+    logging.basicConfig(level=int(os.environ.get("LOGLV",logging.ERROR)),format='<%(name)s>[%(levelname)s]%(funcName)s : %(message)s')
     logger=logging.getLogger('server')
     logging.addLevelName(45, "Server")
     #initialize server
