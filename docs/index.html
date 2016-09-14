@@ -45,17 +45,17 @@
   <div id="content">
     <h1 class="heading">Carbon Dating The Web</h1>
     <p class="subheading">Predict the Birthday of a Webpage!</p>
-    <form target="http://cd.cs.odu.edu/cd" method="GET">
+    <form target="https://carbondate.herokuapp.com/cd" method="GET">
       <input type="text" id="input" name="url" value="http://www.cs.odu.edu/" /><br />
       <button id="submit">Carbon Date!</button>
     </form>
-    <div id="res">GET http://cd.cs.odu.edu/cd?url=http://www.cs.odu.edu/</div>
+    <div id="res">GET carbondate.herokuapp.com/cd?url=http://www.cs.odu.edu/</div>
     <p class="subheading">
       <a href="http://ws-dl.blogspot.com/2014/11/2014-11-14-carbon-dating-web-version-20.html">Carbon dating</a>
       is computationally expensive. </br>Please try again later if the process takes too long; we'll save your request.
     </br></br>
     If you plan to carbon date a large number of web pages, as a courtesy to other users, kindly 
-    <a href="https://github.com/oduwsdl/CarbonDate">install 
+    <a href="https://github.com/darkangelzt/CarbonDate">install 
       the application locally</a>
     </p>
     <div class="footer">
@@ -64,8 +64,8 @@
   </div>
   <script>
   $("#submit").click(function() {
-    uri = '/cd?url=' + $('#input').val();
-    history.pushState({url: ''}, 'http://wsdl-docker.cs.odu.edu:8080/', '/cd?url=' + $('#input').val());
+    uri = '//carbondate.herokuapp.com/cd?url=' + $('#input').val();
+    history.pushState({url: ''}, 'https://carbondate.herokuapp.com/', '/cd?url=' + $('#input').val());
     $('#res').html('Loading please wait...');
     $.getJSON(uri, function(data) {
       $('#res').html('<pre>' + JSON.stringify(data, null, '  ') + '</pre>');
