@@ -34,7 +34,7 @@ def cd(modLoader,args):
             if args.ak is not None:
                 cfg[args.ak[0]]=args.ak[1]
                 print("\"%s\" is now set to \"%s\"" %(args.ak[0], cfg[args.ak[0]]))
-                open('config','w') as f:
+                with open('config','w') as f:
                     json.dump(cfg, f, sort_keys=True, indent=4, separators=(',', ': '))
             if args.rk is not None:
                 try:
